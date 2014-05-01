@@ -56,12 +56,12 @@ public:
     void reverseWords2(string &s) {
         istringstream iss(s);
         ostringstream oss;
-        std::vector<string> vs;
+        vector<string> vs;
         string temp;
         while(iss >> temp) vs.push_back(temp);
         reverse(begin(vs), end(vs));
         ostream_iterator<string> out_it (oss," ");
-        std::copy (vs.begin(), vs.end() -1, out_it);
+        copy (vs.begin(), vs.end() -1, out_it);
         oss << *(vs.end() -1);
         
         // for (int i = 0; i < vs.size(); i++) {
